@@ -1,2 +1,3 @@
-public class RecipeManager {
+public class RecipeManager <T>{
+
 }
