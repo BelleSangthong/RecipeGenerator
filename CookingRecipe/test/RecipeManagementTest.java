@@ -12,6 +12,8 @@ public class RecipeManagementTest {
         recipe.addIngredient(new Ingredients("1/2 cup", "granola"));
         recipe.addIngredient(new Ingredients("1/2 cup", "fresh fruit"));
 
+        manager.getBreakfast().addRecipe(recipe);
+
 
 
     }
