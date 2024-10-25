@@ -12,5 +12,8 @@ public class Mealtype {
     public void addRecipe(Recipe recipe) {
         this.recipes.add(recipe);
     }
+    public List<Recipe> getRecipes() {
+        return recipes;
+    }
 }
 

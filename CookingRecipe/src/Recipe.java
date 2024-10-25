@@ -12,7 +12,11 @@ public class Recipe {
         this.ingredients = new ArrayList<>();
         this.instructions = instructions;
     }
+
     public void addIngredient(Ingredients ingredient) {
         this.ingredients.add(ingredient);
+    }
+    public String getTitle() {
+        return title;
     }
 }

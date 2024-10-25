@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RecipeManagementTest {
 
@@ -14,8 +15,8 @@ public class RecipeManagementTest {
 
         manager.getBreakfast().addRecipe(recipe);
 
-
-
+        assertEquals(1, manager.getBreakfast().getRecipes().size());
+        assertEquals("Yogurt Parfait", manager.getBreakfast().getRecipes().get(0).getTitle());
     }
 
 }
