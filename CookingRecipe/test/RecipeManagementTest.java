@@ -20,6 +20,15 @@ public class RecipeManagementTest {
     }
 
     //TODO: Make a test when a recipe removed
-    
+    public void testRemoveRecipe() {
+        RecipeManager manager = new RecipeManager();
+        Recipe recipe = new Recipe("Yogurt Parfait",
+                "Layer the yogurt, granola, and fresh fruit in a cup");
+
+        manager.getBreakfast().addRecipe(recipe);
+        manager.getBreakfast().removeRecipe("Yogurt Parfait");
+
+        assertEquals(0, manager.getBreakfast().getRecipes().size());
+    }
 
 }

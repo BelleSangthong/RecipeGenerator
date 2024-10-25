@@ -9,9 +9,15 @@ public class Mealtype {
         this.mealName = mealName;
         this.recipes = new ArrayList<>();
     }
+
     public void addRecipe(Recipe recipe) {
-        this.recipes.add(recipe);
+        recipes.add(recipe);
     }
+
+    public void removeRecipe(String title) {
+        recipes.removeIf(recipe -> recipe.getTitle().equals(title));
+    }
+
     public List<Recipe> getRecipes() {
         return recipes;
     }

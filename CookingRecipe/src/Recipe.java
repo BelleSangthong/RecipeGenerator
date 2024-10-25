@@ -16,6 +16,11 @@ public class Recipe {
     public void addIngredient(Ingredients ingredient) {
         this.ingredients.add(ingredient);
     }
+
+
+
+
+
     public String getTitle() {
         return title;
     }
