@@ -31,4 +31,7 @@ public class RecipeManagementTest {
         assertEquals(0, manager.getBreakfast().getRecipes().size());
     }
 
+    //TODO: Make a test to show all recipes
+    
+
 }
