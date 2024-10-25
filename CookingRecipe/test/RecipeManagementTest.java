@@ -19,4 +19,7 @@ public class RecipeManagementTest {
         assertEquals("Yogurt Parfait", manager.getBreakfast().getRecipes().get(0).getTitle());
     }
 
+    //TODO: Make a test when a recipe removed
+    
+
 }
