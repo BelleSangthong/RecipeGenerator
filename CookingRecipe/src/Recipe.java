@@ -17,6 +17,14 @@ public class Recipe {
         this.ingredients.add(ingredient);
     }
 
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public List<Ingredients> getIngredients() {
+        return ingredients;
+    }
+
 
 
 

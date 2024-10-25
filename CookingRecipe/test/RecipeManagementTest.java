@@ -32,6 +32,23 @@ public class RecipeManagementTest {
     }
 
     //TODO: Make a test to show all recipes
-    
+    public void testShowAllRecipes() {
+        RecipeManager manager = new RecipeManager();
+        Recipe recipe = new Recipe("Yogurt Parfait",
+                "Layer the yogurt, granola, and fresh fruit in a cup");
+        recipe.addIngredient(new Ingredients("1 cup", "yogurt"));
+        recipe.addIngredient(new Ingredients("1/2 cup", "granola"));
+        recipe.addIngredient(new Ingredients("1/2 cup", "fresh fruit"));
 
+        manager.getBreakfast().addRecipe(recipe);
+
+        Recipe addedRecipe = manager.getBreakfast().getRecipes().get(0);
+
+        assertEquals("Yogurt Parfait", addedRecipe.getTitle());
+        assertEquals("Layer the yogurt, granola, and fresh fruit in a cup", addedRecipe.getInstructions());
+        assertEquals(3, addedRecipe.getIngredients().size());
+        assertEquals("1 cup of yogurt", addedRecipe.getIngredients().get(0).toString());
+        assertEquals("1/2 cup of granola", addedRecipe.getIngredients().get(1).toString());
+        assertEquals("1/2 cup of fresh fruit", addedRecipe.getIngredients().get(2).toString());
+    }
 }
