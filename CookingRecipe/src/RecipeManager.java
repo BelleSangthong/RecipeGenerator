@@ -1,17 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class RecipeManager {
-    private Mealtype breakfast;
-    private Mealtype lunch;
-    private Mealtype dinner;
+    private List<Category<Recipe>> categories;
 
     public RecipeManager() {
-        this.breakfast = new Mealtype("Breakfast");
-        this.lunch = new Mealtype("Lunch");
-        this.dinner = new Mealtype("Dinner");
+        categories = new ArrayList<>();
+        categories.add(new Mealtype("Breakfast"));
+        categories.add(new Mealtype("Lunch"));
+        categories.add(new Mealtype("Dinner"));
     }
 
-    public Mealtype getBreakfast() {
-        return this.breakfast;
+    public Category<Recipe> getCategory(String name) {
+        for (Category<Recipe> category : categories) {
+            if (category.getName().equalsIgnoreCase(name)) {
+                return category;
+            }
+        }
+        return null;
     }
 
+    public void displayAllRecipes() {
+        for (Category<Recipe> category : categories) {
+            category.showAllItems();
+        }
+    }
 }
-
